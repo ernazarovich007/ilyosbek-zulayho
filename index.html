@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ilyosbek va Zulayho to‘yi</title>
+<meta property="og:title" content="Ilyosbek va Zulayho — nikoh to‘yiga taklifnoma">
+<meta property="og:description" content="15-oktyabr 2026, soat 18:00 · “Omad” to‘yxonasi, Urganch">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#17142e">
+<style>html,body{margin:0}:root{padding-block:env(safe-area-inset-top,0px) env(safe-area-inset-bottom,0px)}img{max-width:100%}[hidden]{display:none!important}</style>
+<meta name="description" content="Ilyosbek va Zulayholarning nikoh to‘yiga taklifnoma. 15-oktyabr 2026, soat 18:00, “Omad” to‘yxonasi, Urganch.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Forum&family=Pinyon+Script&family=Jost:wght@300;400;500&display=swap">
+<style>
+/* Layout: abr (ikat) silk curtain parts to reveal one centered column on a night-indigo ground, sections divided by woven abr bands. Single committed dark look. */
+:root{
+  --night:#17142e;
+  --night-2:#221c42;
+  --anor:#c8324d;
+  --anor-deep:#8e1f37;
+  --saffron:#e9b24c;
+  --teal:#2e6e72;
+  --pearl:#f4ecdc;
+  --muted:#b8afcb;
+  --line:rgba(233,178,76,.28);
+  --f-display:"Forum","Cormorant Garamond",Georgia,serif;
+  --f-script:"Pinyon Script","Snell Roundhand","Apple Chancery",cursive;
+  --f-body:"Jost","Segoe UI",system-ui,sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{background:var(--night)}
+body{background:var(--night);color:var(--pearl);font-family:var(--f-body);font-weight:300;font-size:16px;line-height:1.65;padding-inline:16px;padding-block:0 56px;overflow-x:hidden}
+body.locked{overflow:hidden;height:100%}
+.wrap{max-width:540px;margin:0 auto;display:flex;flex-direction:column;align-items:center;text-align:center;gap:40px}
+canvas.band{display:block;width:100%;height:40px}
+
+/* language */
+.lang{display:flex;gap:6px;justify-content:center;padding-top:18px}
+.lang button{font:500 12px/1 var(--f-body);letter-spacing:.14em;color:var(--muted);background:transparent;border:1px solid var(--line);border-radius:999px;padding:7px 12px;cursor:pointer}
+.lang button[aria-pressed="true"]{color:var(--night);background:var(--saffron);border-color:var(--saffron)}
+button:focus-visible,a:focus-visible{outline:2px solid var(--saffron);outline-offset:3px}
+
+/* hero */
+.hero{display:flex;flex-direction:column;align-items:center;gap:14px;padding-top:8px}
+.eyebrow{font:500 12px/1.4 var(--f-body);letter-spacing:.28em;text-transform:uppercase;color:var(--saffron)}
+.anor{width:76px;height:auto}
+.names{font-family:var(--f-script);font-weight:400;font-size:clamp(54px,15vw,84px);line-height:1;margin:6px 0 0;text-wrap:balance;color:var(--pearl)}
+.names .amp{display:block;font-family:var(--f-display);font-size:.38em;color:var(--anor);margin:10px 0 6px;letter-spacing:.1em}
+.date-line{font:400 20px/1.3 var(--f-display);letter-spacing:.2em;color:var(--saffron)}
+
+.intro{max-width:44ch;font-size:17px;color:var(--pearl)}
+.intro strong{font-weight:500;color:var(--saffron)}
+
+/* date + calendar */
+.when{width:100%;display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center}
+.bigday{display:flex;flex-direction:column;align-items:center;gap:2px}
+.bigday .num{font:400 108px/0.9 var(--f-display);color:var(--anor)}
+.bigday .mon{font:400 22px/1.2 var(--f-display);letter-spacing:.24em;text-transform:uppercase}
+.bigday .wd{font-size:14px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase}
+.bigday .hr{margin-top:8px;font:400 26px/1 var(--f-display);color:var(--saffron);letter-spacing:.08em}
+.cal{min-width:0}
+.cal h3{margin:0 0 10px;font:400 16px/1 var(--f-display);letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.cal .grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;font-variant-numeric:tabular-nums;font-size:13px}
+.cal .dn{color:var(--saffron);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;padding-bottom:4px}
+.cal .d{aspect-ratio:1;display:grid;place-items:center;color:var(--muted);max-width:100%}
+.cal .d.on{color:var(--pearl);background:var(--anor);border-radius:50%;font-weight:500;box-shadow:0 0 0 4px rgba(200,50,77,.25)}
+
+/* countdown */
+.count{display:grid;grid-template-columns:repeat(4,1fr);width:100%;border-block:1px solid var(--line)}
+.count div{padding:16px 4px;display:flex;flex-direction:column;gap:4px}
+.count div+div{border-left:1px solid var(--line)}
+.count b{font:400 38px/1 var(--f-display);font-variant-numeric:tabular-nums;color:var(--pearl)}
+.count span{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.count-done{font:400 26px/1.3 var(--f-display);color:var(--saffron);padding:18px 0}
+
+/* venue */
+.venue{display:flex;flex-direction:column;align-items:center;gap:10px}
+.venue .label{font:500 12px/1 var(--f-body);letter-spacing:.28em;text-transform:uppercase;color:var(--saffron)}
+.venue h2{margin:0;font:400 36px/1.15 var(--f-display);text-wrap:balance}
+.venue p{margin:0;color:var(--muted)}
+.btn{display:inline-flex;align-items:center;gap:10px;margin-top:8px;padding:13px 22px;border-radius:999px;background:var(--anor);color:var(--pearl);text-decoration:none;font:500 14px/1 var(--f-body);letter-spacing:.1em;text-transform:uppercase;transition:background .2s}
+.btn:hover{background:var(--anor-deep)}
+.btn svg{width:16px;height:16px}
+
+/* closing */
+.sign{display:flex;flex-direction:column;align-items:center;gap:4px}
+.sign .with{font-size:14px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.sign .fam{font:400 52px/1.1 var(--f-script);color:var(--saffron)}
+
+/* curtain */
+.curtain{position:fixed;inset:0;z-index:50;display:block}
+.curtain .half{position:absolute;top:0;bottom:0;width:50.5%;background-repeat:no-repeat;background-size:100vw 100%;transition:transform 1.5s cubic-bezier(.7,0,.2,1)}
+.curtain .left{left:0;background-position:left top;box-shadow:inset -18px 0 30px -18px rgba(0,0,0,.6)}
+.curtain .right{right:0;background-position:right top;box-shadow:inset 18px 0 30px -18px rgba(0,0,0,.6)}
+.curtain.open .left{transform:translateX(-102%)}
+.curtain.open .right{transform:translateX(102%)}
+.medal{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(300px,84vw);padding:30px 22px 26px;border-radius:50% 50% 24px 24px / 34% 34% 24px 24px;background:var(--night);border:1px solid var(--saffron);box-shadow:0 0 0 6px var(--night),0 0 0 7px var(--line),0 24px 60px rgba(0,0,0,.55);display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;transition:opacity .5s,transform .6s}
+.curtain.open .medal{opacity:0;transform:translate(-50%,-50%) scale(.9);pointer-events:none}
+.medal .anor{width:54px}
+.medal .n{font:400 40px/1.05 var(--f-script)}
+.medal .d{font:400 15px/1 var(--f-display);letter-spacing:.24em;color:var(--saffron)}
+.medal button{margin-top:8px;padding:12px 20px;border:0;border-radius:999px;background:var(--anor);color:var(--pearl);font:500 13px/1 var(--f-body);letter-spacing:.12em;text-transform:uppercase;cursor:pointer}
+.medal button:hover{background:var(--anor-deep)}
+.curtain.gone{display:none}
+
+/* music toggle */
+.music{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom, 0px));z-index:40;width:48px;height:48px;border-radius:50%;border:1px solid var(--saffron);background:var(--night-2);color:var(--saffron);display:grid;place-items:center;cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.45)}
+.music svg{width:20px;height:20px}
+.music .off{display:none}
+.music[aria-pressed="false"] .on{display:none}
+.music[aria-pressed="false"] .off{display:block}
+.music[aria-pressed="true"]::after{content:"";position:absolute;inset:-5px;border-radius:50%;border:1px solid var(--saffron);opacity:.5;animation:pulse 2.4s ease-out infinite}
+@keyframes pulse{from{transform:scale(1);opacity:.5}to{transform:scale(1.35);opacity:0}}
+body.locked .music{display:none}
+
+.reveal{transition:opacity .9s .5s,transform .9s .5s}
+body.locked .reveal{opacity:.0;transform:translateY(14px)}
+
+@media (max-width:420px){
+  .when{grid-template-columns:1fr}
+  .count b{font-size:30px}
+}
+@media (prefers-reduced-motion:reduce){
+  .curtain .half,.medal,.reveal{transition:none}
+  .music::after{animation:none!important}
+}
+</style>
+</head>
+<body>
+<div class="curtain" id="curtain" role="dialog" aria-label="Taklifnoma">
+  <div class="half left"></div>
+  <div class="half right"></div>
+  <div class="medal">
+    <svg class="anor" viewBox="0 0 80 84" aria-hidden="true"><use href="#anor"/></svg>
+    <div class="n">Ilyosbek &amp; Zulayho</div>
+    <div class="d">15 · 10 · 2026</div>
+    <button id="openBtn" type="button" data-i18n="open">Taklifnomani ochish</button>
+  </div>
+</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="anor" viewBox="0 0 80 84">
+      <path d="M31 14 L34 4 L38 11 L40 2 L42 11 L46 4 L49 14 Z" fill="#e9b24c"/>
+      <circle cx="40" cy="48" r="32" fill="#c8324d"/>
+      <path d="M40 22 A26 26 0 0 1 40 74 A26 26 0 0 1 40 22 Z" fill="none" stroke="#8e1f37" stroke-width="2"/>
+      <g fill="#f4ecdc">
+        <circle cx="32" cy="40" r="3.2"/><circle cx="40" cy="36" r="3.2"/><circle cx="48" cy="40" r="3.2"/>
+        <circle cx="28" cy="49" r="3.2"/><circle cx="36" cy="46" r="3.2"/><circle cx="44" cy="46" r="3.2"/><circle cx="52" cy="49" r="3.2"/>
+        <circle cx="32" cy="56" r="3.2"/><circle cx="40" cy="55" r="3.2"/><circle cx="48" cy="56" r="3.2"/>
+        <circle cx="36" cy="63" r="3.2"/><circle cx="44" cy="63" r="3.2"/>
+      </g>
+      <path d="M8 48 A32 32 0 0 1 72 48" fill="none" stroke="#e9b24c" stroke-width="1.5" stroke-dasharray="2 4" opacity=".6"/>
+    </symbol>
+  </defs>
+</svg>
+
+<button class="music" id="musicBtn" type="button" aria-pressed="false" aria-label="Musiqa">
+  <svg class="on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/></svg>
+  <svg class="off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/><path d="M3 3l18 18"/></svg>
+</button>
+
+<div class="lang" role="group" aria-label="Til">
+  <button type="button" data-lang="uz" aria-pressed="true">O‘ZB</button>
+  <button type="button" data-lang="ru" aria-pressed="false">РУС</button>
+</div>
+
+<main class="wrap reveal">
+  <section class="hero">
+    <div class="eyebrow" data-i18n="eyebrow">Nikoh to‘yiga taklifnoma</div>
+    <svg class="anor" viewBox="0 0 80 84" aria-hidden="true"><use href="#anor"/></svg>
+    <h1 class="names">Ilyosbek<span class="amp">&amp;</span>Zulayho</h1>
+    <div class="date-line">15 · 10 · 2026</div>
+  </section>
+
+  <canvas class="band" aria-hidden="true"></canvas>
+
+  <p class="intro" data-i18n-html="intro">Hurmatli mehmon! Sizni <strong>Ilyosbek va Zulayho</strong>larning nikoh to‘yiga bag‘ishlangan tantanali kechamizga lutfan taklif etamiz. Ushbu quvonchli kunni biz bilan birga baham ko‘rishingizdan mamnun bo‘lamiz.</p>
+
+  <section class="when" aria-label="Sana">
+    <div class="bigday">
+      <div class="num">15</div>
+      <div class="mon" data-i18n="month">Oktyabr</div>
+      <div class="wd" data-i18n="weekday">Payshanba · 2026</div>
+      <div class="hr" data-i18n="time">soat 18:00</div>
+    </div>
+    <div class="cal">
+      <h3 data-i18n="calTitle">Oktyabr 2026</h3>
+      <div class="grid" id="cal"></div>
+    </div>
+  </section>
+
+  <section class="count" id="count" aria-live="polite">
+    <div><b id="cd-d">0</b><span data-i18n="days">kun</span></div>
+    <div><b id="cd-h">0</b><span data-i18n="hours">soat</span></div>
+    <div><b id="cd-m">0</b><span data-i18n="mins">daqiqa</span></div>
+    <div><b id="cd-s">0</b><span data-i18n="secs">soniya</span></div>
+  </section>
+
+  <canvas class="band" aria-hidden="true"></canvas>
+
+  <section class="venue">
+    <div class="label" data-i18n="venueLabel">To‘y manzili</div>
+    <h2 data-i18n="venue">“Omad” to‘yxonasi</h2>
+    <p data-i18n="city">Urganch shahri</p>
+    <a class="btn" href="https://yandex.uz/maps/?text=Omad%20to%27yxonasi%20Urganch" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+      <span data-i18n="map">Xaritada ochish</span>
+    </a>
+  </section>
+
+  <section class="sign">
+    <div class="with" data-i18n="respect">Hurmat bilan</div>
+    <div class="fam" data-i18n="family">Egamovlar oilasi</div>
+  </section>
+</main>
+
+<script>
+(function(){
+  var T = {
+    uz:{open:"Taklifnomani ochish",eyebrow:"Nikoh to‘yiga taklifnoma",
+      intro:"Hurmatli mehmon! Sizni <strong>Ilyosbek va Zulayho</strong>larning nikoh to‘yiga bag‘ishlangan tantanali kechamizga lutfan taklif etamiz. Ushbu quvonchli kunni biz bilan birga baham ko‘rishingizdan mamnun bo‘lamiz.",
+      month:"Oktyabr",weekday:"Payshanba · 2026",time:"soat 18:00",calTitle:"Oktyabr 2026",
+      days:"kun",hours:"soat",mins:"daqiqa",secs:"soniya",done:"To‘y kuni keldi!",
+      venueLabel:"To‘y manzili",venue:"“Omad” to‘yxonasi",city:"Urganch shahri",map:"Xaritada ochish",
+      respect:"Hurmat bilan",family:"Egamovlar oilasi",wd:["Du","Se","Ch","Pa","Ju","Sh","Ya"]},
+    ru:{open:"Открыть приглашение",eyebrow:"Приглашение на свадьбу",
+      intro:"Дорогой гость! Приглашаем вас на торжественный вечер, посвящённый свадьбе <strong>Ильёсбека и Зулайхо</strong>. Будем рады разделить с вами этот счастливый день.",
+      month:"Октября",weekday:"Четверг · 2026",time:"в 18:00",calTitle:"Октябрь 2026",
+      days:"дней",hours:"часов",mins:"минут",secs:"секунд",done:"Свадьба уже сегодня!",
+      venueLabel:"Место торжества",venue:"Тойхана «Омад»",city:"г. Ургенч",map:"Открыть на карте",
+      respect:"С уважением",family:"Семья Эгамовых",wd:["Пн","Вт","Ср","Чт","Пт","Сб","Вс"]}
+  };
+  var lang = location.hash === "#ru" ? "ru" : "uz";
+
+  function buildCal(){
+    var g = document.getElementById("cal"), t = T[lang], h = "";
+    t.wd.forEach(function(w){ h += '<div class="dn">'+w+'</div>'; });
+    for (var i=0;i<3;i++) h += '<div></div>';          /* 1-oktyabr 2026 — payshanba */
+    for (var d=1; d<=31; d++) h += '<div class="d'+(d===15?' on':'')+'">'+d+'</div>';
+    g.innerHTML = h;
+  }
+  function setLang(l){
+    lang = l; var t = T[l];
+    document.documentElement.lang = l;
+    document.querySelectorAll("[data-i18n]").forEach(function(el){ el.textContent = t[el.dataset.i18n]; });
+    document.querySelectorAll("[data-i18n-html]").forEach(function(el){ el.innerHTML = t[el.dataset.i18nHtml]; });
+    document.querySelectorAll(".lang button").forEach(function(b){ b.setAttribute("aria-pressed", b.dataset.lang===l); });
+    buildCal(); tick();
+  }
+  document.querySelectorAll(".lang button").forEach(function(b){ b.addEventListener("click", function(){ setLang(b.dataset.lang); }); });
+
+  /* countdown */
+  var target = new Date("2026-10-15T18:00:00+05:00").getTime();
+  function tick(){
+    var ms = target - Date.now(), box = document.getElementById("count");
+    if (ms <= 0){ box.innerHTML = '<div class="count-done" style="grid-column:1/-1">'+T[lang].done+'</div>'; return; }
+    var s = Math.floor(ms/1000);
+    document.getElementById("cd-d").textContent = Math.floor(s/86400);
+    document.getElementById("cd-h").textContent = String(Math.floor(s%86400/3600)).padStart(2,"0");
+    document.getElementById("cd-m").textContent = String(Math.floor(s%3600/60)).padStart(2,"0");
+    document.getElementById("cd-s").textContent = String(s%60).padStart(2,"0");
+  }
+  setInterval(tick, 1000);
+
+  /* abr (ikat) weave */
+  function rng(seed){ return function(){ seed = (seed*16807) % 2147483647; return seed/2147483647; }; }
+  function ikat(ctx, W, H, opt){
+    var r = rng(opt.seed||7), sc = opt.scale||1, S = 118*sc, P = 170*sc;
+    ctx.fillStyle = "#221c42"; ctx.fillRect(0,0,W,H);
+    var cols = opt.single ? [W/2] : [];
+    if (!opt.single) for (var x = S/2; x < W + S; x += S) cols.push(x);
+    cols.forEach(function(cx, ci){
+      var alt = ci % 2, off = alt ? P/2 : 0, row = 3*sc < 2 ? 2 : 3*sc;
+      if (!opt.single){ /* thin saffron warp threads between motifs */
+        for (var y0=0; y0<H; y0+=row){ ctx.fillStyle = "rgba(233,178,76,.55)"; ctx.fillRect(cx + S/2 - 2*sc + (r()-.5)*3*sc, y0, 3*sc, row); }
+      }
+      for (var y=0; y<H; y+=row){
+        var t = ((y + off) % P) / P, s = 1 - Math.abs(2*t - 1);
+        var j = (r()-.5)*7*sc;
+        var w1 = (74*s + 8)*sc, w2 = (50*s - 8)*sc, w3 = (22*s - 6)*sc;
+        ctx.fillStyle = alt ? "#2e6e72" : "#c8324d"; ctx.fillRect(cx - w1/2 + j, y, w1, row);
+        if (w2 > 0){ ctx.fillStyle = alt ? "#f4ecdc" : "#e9b24c"; ctx.fillRect(cx - w2/2 + j*.6, y, w2, row); }
+        if (w3 > 0){ ctx.fillStyle = alt ? "#c8324d" : "#17142e"; ctx.fillRect(cx - w3/2 + j*.3, y, w3, row); }
+      }
+    });
+  }
+  function drawBands(){
+    document.querySelectorAll("canvas.band").forEach(function(c, i){
+      var dpr = window.devicePixelRatio||1, w = c.clientWidth, h = c.clientHeight;
+      c.width = w*dpr; c.height = h*dpr;
+      var ctx = c.getContext("2d"); ctx.scale(dpr,dpr);
+      ctx.translate(0,h); ctx.rotate(-Math.PI/2);       /* horizontal band = rotated warp */
+      ikat(ctx, h, w, {scale:.26, single:true, seed:11+i});
+    });
+  }
+  function drawCurtain(){
+    var c = document.createElement("canvas"), dpr = Math.min(window.devicePixelRatio||1, 2);
+    var W = innerWidth, H = innerHeight; c.width = W*dpr; c.height = H*dpr;
+    var ctx = c.getContext("2d"); ctx.scale(dpr,dpr);
+    ikat(ctx, W, H, {scale: W < 500 ? .75 : 1, seed:3});
+    var g = ctx.createLinearGradient(0,0,0,H);
+    g.addColorStop(0,"rgba(23,20,46,.35)"); g.addColorStop(.5,"rgba(23,20,46,0)"); g.addColorStop(1,"rgba(23,20,46,.45)");
+    ctx.fillStyle = g; ctx.fillRect(0,0,W,H);
+    var url = c.toDataURL("image/jpeg", .85);
+    document.querySelectorAll(".curtain .half").forEach(function(h){ h.style.backgroundImage = "url("+url+")"; });
+  }
+
+  /* ---------- music ----------
+     1) If a "music.mp3" file sits next to the page, it plays that.
+     2) Otherwise it plays a soft piano arrangement of Pachelbel's Canon in D (public domain). */
+  var musicBtn = document.getElementById("musicBtn"), mode = null, file = null, ac = null, master = null, loopTimer = null, nextLoop = 0, loopNo = 0;
+  var BEAT = 0.8;   /* seconds per half-chord */
+  var CH = [ /* bass, arpeggio, melody, upper harmony */
+    [50,[62,66,69,66],78,81],[45,[57,61,64,61],76,79],[47,[59,62,66,62],74,78],[42,[54,57,61,57],73,76],
+    [43,[55,59,62,59],71,74],[50,[62,66,69,66],69,73],[43,[55,59,62,59],71,74],[45,[57,61,64,61],73,76]
+  ];
+  function hz(m){ return 440*Math.pow(2,(m-69)/12); }
+  function key(t, m, len, vel){
+    var g = ac.createGain(), o1 = ac.createOscillator(), o2 = ac.createOscillator(), g2 = ac.createGain();
+    o1.type = "triangle"; o1.frequency.value = hz(m);
+    o2.type = "sine"; o2.frequency.value = hz(m)*2; g2.gain.value = .25;
+    g.gain.setValueAtTime(0.0001, t);
+    g.gain.exponentialRampToValueAtTime(vel, t + .012);
+    g.gain.exponentialRampToValueAtTime(0.0008, t + len);
+    o1.connect(g); o2.connect(g2); g2.connect(g); g.connect(master);
+    o1.start(t); o2.start(t); o1.stop(t + len + .05); o2.stop(t + len + .05);
+  }
+  function scheduleLoop(t0){
+    var v = loopNo % 4; /* 0: harmony only, 1: melody, 2: melody in thirds, 3: melody */
+    CH.forEach(function(c, i){
+      var t = t0 + i*BEAT*2;
+      key(t, c[0], 3.2, .22);
+      c[1].forEach(function(n, k){ key(t + k*BEAT/2, n, 1.6, .09); });
+      if (v === 1 || v === 3) key(t, c[2], 2.6, .16);
+      if (v === 2){ key(t, c[3], 1.4, .14); key(t + BEAT, c[2], 1.4, .13); }
+    });
+    loopNo++;
+  }
+  function makeReverb(){
+    var len = ac.sampleRate*2.6, buf = ac.createBuffer(2, len, ac.sampleRate);
+    for (var ch=0; ch<2; ch++){ var d = buf.getChannelData(ch); for (var i=0;i<len;i++) d[i] = (Math.random()*2-1)*Math.pow(1-i/len, 3); }
+    var cv = ac.createConvolver(); cv.buffer = buf; return cv;
+  }
+  function startSynth(){
+    mode = "synth";
+    var AC = window.AudioContext || window.webkitAudioContext; if (!AC) return;
+    ac = new AC(); master = ac.createGain(); master.gain.value = 0.0001;
+    var wet = ac.createGain(); wet.gain.value = .35;
+    var rev = makeReverb();
+    master.connect(ac.destination); master.connect(rev); rev.connect(wet); wet.connect(ac.destination);
+    master.gain.exponentialRampToValueAtTime(.8, ac.currentTime + 2.5);
+    nextLoop = ac.currentTime + .2; scheduleLoop(nextLoop); nextLoop += CH.length*BEAT*2;
+    loopTimer = setInterval(function(){ if (ac.currentTime > nextLoop - 2){ scheduleLoop(nextLoop); nextLoop += CH.length*BEAT*2; } }, 400);
+    musicBtn.setAttribute("aria-pressed","true");
+  }
+  function startMusic(){
+    file = new Audio("music.mp3"); file.loop = true; file.volume = .8;
+    var p = file.play();
+    if (p && p.then){
+      p.then(function(){ mode = "file"; musicBtn.setAttribute("aria-pressed","true"); })
+       .catch(function(){ file = null; startSynth(); });
+    } else { file = null; startSynth(); }
+  }
+  musicBtn.addEventListener("click", function(){
+    var on = musicBtn.getAttribute("aria-pressed") === "true";
+    if (!mode){ startMusic(); return; }
+    if (mode === "file"){ on ? file.pause() : file.play(); }
+    else if (ac){ on ? ac.suspend() : ac.resume(); }
+    musicBtn.setAttribute("aria-pressed", String(!on));
+  });
+  document.addEventListener("visibilitychange", function(){
+    if (musicBtn.getAttribute("aria-pressed") !== "true") return;
+    if (mode === "file") document.hidden ? file.pause() : file.play();
+    else if (ac) document.hidden ? ac.suspend() : ac.resume();
+  });
+
+  var curtain = document.getElementById("curtain"), opened = false;
+  document.body.classList.add("locked");
+  document.getElementById("openBtn").addEventListener("click", function(){
+    opened = true;
+    startMusic();
+    curtain.classList.add("open");
+    document.body.classList.remove("locked");
+    var reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    setTimeout(function(){ curtain.classList.add("gone"); }, reduce ? 0 : 1600);
+  });
+
+  var rt; addEventListener("resize", function(){ clearTimeout(rt); rt = setTimeout(function(){ drawBands(); if(!opened) drawCurtain(); }, 150); });
+  setLang(lang); drawBands(); drawCurtain();
+  document.getElementById("openBtn").focus({preventScroll:true});
+})();
+</script>
+</body>
+</html>
